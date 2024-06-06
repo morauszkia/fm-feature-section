@@ -17,6 +17,7 @@
   --text-intro: 1.5rem;
   --text-feature-title: 2rem;
   --text-feature-content: 1.3rem;
+  --ws-inner: calc(2rem + 1vw);
 }
 
 html {
@@ -37,6 +38,89 @@ body {
   position: relative;
 }
 
+main {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 7.6rem;
+  align-items: center;
+}
+
+.intro {
+  max-width: 54rem;
+  text-align: center;
+  color: var(--color-grayish-blue);
+  font-size: var(--text-intro);
+}
+
+.intro__title {
+  font-weight: 200;
+  font-size: clamp(1.5rem, 6vw, 3.6rem);
+  color: var(--color-very-dark-blue);
+  line-height: 1.5;
+  margin-bottom: 1.6rem;
+}
+
+.intro__title strong {
+  font-weight: 600;
+}
+
+.features {
+  display: grid;
+  gap: var(--ws-inner);
+  max-width: 100%;
+  list-style-type: none;
+}
+
+.features__feature {
+  aspect-ratio: 7/5;
+  max-width: 350px;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: var(--ws-inner);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-top-width: 4px;
+  border-top-style: solid;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.feature--cyan {
+  border-top-color: var(--color-cyan);
+}
+
+.feature--red {
+  border-top-color: var(--color-red);
+}
+
+.feature--orange {
+  border-top-color: var(--color-orange);
+}
+
+.feature--blue {
+  border-top-color: var(--color-blue);
+}
+
+.feature__title {
+  font-size: var(--text-feature-title);
+  color: var(--color-very-dark-blue);
+  margin-bottom: var(--text-feature-content);
+}
+
+.feature__desc {
+  font-size: var(--text-feature-content);
+  color: var(--color-grayish-blue);
+}
+
+.feature__icon {
+  height: calc(2.4 * var(--ws-inner));
+  width: calc(2.4 * var(--ws-inner));
+  align-self: flex-end;
+}
+
 footer {
   position: absolute;
   bottom: 0;
@@ -44,9 +128,11 @@ footer {
 
 .attribution {
   font-size: 11px;
+  font-weight: 200;
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--color-very-dark-blue);
+  font-weight: 600;
 }
