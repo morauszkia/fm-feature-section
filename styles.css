@@ -17,7 +17,7 @@
   --text-intro: 1.5rem;
   --text-feature-title: 2rem;
   --text-feature-content: 1.3rem;
-  --ws-inner: calc(2rem + 1vw);
+  --ws-inner: calc(1.8rem + 1vw);
 }
 
 html {
@@ -118,8 +118,8 @@ main {
 }
 
 .feature__icon {
-  height: calc(2.4 * var(--ws-inner));
-  width: calc(2.4 * var(--ws-inner));
+  width: clamp(4.8rem, calc(2.2 * var(--ws-inner)), 6.4rem);
+  block-size: auto;
   align-self: flex-end;
 }
 
@@ -129,7 +129,7 @@ footer {
 }
 
 .attribution {
-  font-size: 11px;
+  font-size: 1.2rem;
   font-weight: 200;
   text-align: center;
 }
